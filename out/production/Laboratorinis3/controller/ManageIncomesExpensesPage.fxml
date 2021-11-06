@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageIncomesExpensesPage">
+   <children>
+      <SplitPane dividerPositions="0.4953611663353214" layoutX="-1.0" layoutY="-1.0" prefHeight="406.0" prefWidth="605.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ListView fx:id="list" layoutX="14.0" layoutY="141.0" prefHeight="208.0" prefWidth="270.0" />
+                  <Button fx:id="btnDelete" layoutX="157.0" layoutY="359.0" mnemonicParsing="false" onAction="#delete" prefHeight="26.0" prefWidth="126.0" text="Delete" />
+                  <Button fx:id="btnUpdate" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#update" prefHeight="26.0" prefWidth="126.0" text="Update" />
+                  <Label fx:id="lblAdd1" layoutX="10.0" layoutY="14.0" style="-fx-font-weight: bold;" text="Total income: " />
+                  <Label fx:id="lblAdd11" layoutX="10.0" layoutY="38.0" style="-fx-font-weight: bold;" text="Total expense: " />
+                  <Label fx:id="lblTotalIncome" layoutX="119.0" layoutY="14.0" text="Label" />
+                  <Label fx:id="lblTotalExpense" layoutX="119.0" layoutY="38.0" text="Label" />
+                  <DatePicker fx:id="dateFrom" layoutX="14.0" layoutY="106.0" prefHeight="26.0" prefWidth="126.0" />
+                  <DatePicker fx:id="dateUntil" layoutX="153.0" layoutY="106.0" prefHeight="26.0" prefWidth="126.0" />
+                  <Label fx:id="lblAdd111" layoutX="10.0" layoutY="61.0" style="-fx-font-weight: bold;" text="Filtered category expense: " />
+                  <Label fx:id="lblAdd1111" layoutX="10.0" layoutY="83.0" style="-fx-font-weight: bold;" text="Filtered category income: " />
+                  <Label fx:id="lblTotalCategoryExpense" layoutX="211.0" layoutY="61.0" text="Label" />
+                  <Label fx:id="lblTotalCategoryIncome" layoutX="211.0" layoutY="83.0" text="Label" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="199.0">
+               <children>
+                  <Label fx:id="lblAdd" layoutX="11.0" layoutY="14.0" style="-fx-font-weight: bold;" text="ADD INCOME/EXPENSE" />
+                  <TextField fx:id="textAmount" layoutX="137.0" layoutY="120.0" prefHeight="26.0" prefWidth="150.0" />
+                  <TextArea fx:id="textDescription" layoutX="137.0" layoutY="156.0" prefHeight="154.0" prefWidth="150.0" wrapText="true" />
+                  <Label layoutX="11.0" layoutY="124.0" text="Amount:" />
+                  <Label layoutX="8.0" layoutY="224.0" text="Description:" />
+                  <Label layoutX="11.0" layoutY="54.0" text="Type:" />
+                  <ComboBox fx:id="comboType" layoutX="137.0" layoutY="50.0" prefWidth="150.0" />
+                  <Button fx:id="btnSave" layoutX="154.0" layoutY="359.0" mnemonicParsing="false" onAction="#save" prefHeight="26.0" prefWidth="134.0" text="Save" />
+                  <Button fx:id="btnCancel" layoutX="11.0" layoutY="359.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="134.0" text="Exit" />
+                  <TextField fx:id="textName" layoutX="137.0" layoutY="86.0" prefHeight="26.0" prefWidth="150.0" />
+                  <Label layoutX="11.0" layoutY="90.0" text="Name:" />
+                  <DatePicker fx:id="dateCreated" layoutX="137.0" layoutY="318.0" prefHeight="26.0" prefWidth="150.0" />
+                  <Label layoutX="13.0" layoutY="322.0" text="Date created:" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
